@@ -1,0 +1,18 @@
+#ifndef INVENTORY_H
+#define INVENTORY_H
+
+#include <vector>
+#include "Book.h"
+
+class Inventory {
+    public:
+	Inventory();
+	~Inventory();
+	void addBook(Book* bookPtr);
+	void displayAll() const;
+	void removeBook(int index);
+    private:
+	std::vector<Book*> books;
+};
+
+#endif
